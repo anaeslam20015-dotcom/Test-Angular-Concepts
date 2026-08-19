@@ -1,0 +1,17 @@
+import { Component, Input } from '@angular/core';
+import { ChildComponent } from '../../child/child/child.component';
+
+@Component({
+  selector: 'app-parent',
+  standalone: true,
+  imports: [ChildComponent],
+  templateUrl: './parent.component.html',
+  styleUrl: './parent.component.css',
+})
+export class ParentComponent {
+  /* send data to Child */
+  parentTitle = 'Hello From Parent';
+
+  /* Data From Child Component */
+  receiveData = '';
+}

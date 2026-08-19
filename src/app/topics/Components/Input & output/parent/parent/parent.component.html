@@ -1,0 +1,5 @@
+<div class="container">
+  <p>parent works!</p>
+  <app-child [getData]="parentTitle" (Data)="receiveData = $event"></app-child>
+  <p>{{ receiveData }}</p>
+</div>

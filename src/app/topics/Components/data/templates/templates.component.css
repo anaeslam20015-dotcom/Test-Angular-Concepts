@@ -1,0 +1,40 @@
+/* ---  Template --- */
+.container .test-Template {
+  display: grid;
+  justify-items: center;
+}
+/* --- Data Binding --- */
+.container .data-binding {
+  display: grid;
+  justify-items: center;
+}
+.container .data-binding .top {
+  display: grid;
+  justify-items: center;
+}
+.container .data-binding .bottom {
+  display: flex;
+  gap: 10px;
+}
+.container .data-binding .Two-Way {
+  display: flex;
+  gap: 15px;
+}
+.container .data-binding .Two-Way input:focus {
+  box-shadow: 0px 0px 3px 2px black;
+}
+
+/* --- directives --- */
+.directives {
+  display: flex;
+  align-items: flex-end;
+}
+.directives .icon {
+  display: grid;
+  gap: 15px;
+  justify-items: center;
+}
+
+.directives .icon .data{
+  display: grid;
+}

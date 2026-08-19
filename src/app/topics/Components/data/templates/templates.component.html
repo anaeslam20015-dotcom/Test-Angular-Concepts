@@ -1,0 +1,83 @@
+<!--
+==== Templates
+
+==== 1/ Data Binding
+-- 1/ Interpolation
+-- 2/ Property Binding
+-- 3/ Event Binding
+-- 4/ Two-Way Binding (ngModel)
+
+==== 2/ Directives
+-- 1/ if Condition
+-- 2/ for
+-- 3/ switch case
+-->
+<div class="container">
+  <div class="test-Template bg-danger text-white w-100 py-5 my-3 rounded-4">
+    <p class="bg-primary text-center w-25 p-2 rounded-3">
+      {{ name }}
+    </p>
+    <p class="bg-primary text-center w-25 p-2 rounded-3">
+      {{ age }}
+    </p>
+    @if (loading) {
+      <p class="bg-primary text-center w-25 p-2 rounded-3">
+        Hello,
+        {{ name }}
+      </p>
+    }
+    <button class="btn btn-dark text-white w-25" (click)="sayHello()">
+      Click
+    </button>
+  </div>
+  <div class="data-binding bg-primary text-white w-100 py-3 my-3 rounded-4">
+    <div class="top">
+      <img [src]="imageUrl" alt="ERROR" class="icon w-50 rounded-4 mb-4" />
+    </div>
+    @if (showData) {
+      <div class="bottom text-center">
+        <p class="bg-dark p-2 rounded-2">
+          <span class="text-info">Name</span> : {{ iconName }}
+        </p>
+        <p class="bg-dark p-2 rounded-2">
+          <span class="text-info">Age</span> : {{ iconAge }}
+        </p>
+        <p class="bg-dark p-2 rounded-2">
+          <span class="text-info">Job</span> : {{ iconJob }}
+        </p>
+      </div>
+    }
+    <button class="btn btn-dark w-25" (click)="Show()">Show Data</button>
+    <div class="Two-Way mt-4">
+      <input
+        type="text"
+        placeholder="Enter Your Name "
+        class="form-control w-75 h-75"
+        [(ngModel)]="UserName"
+      />
+      <p class="bg-info text-black text-center p-2 w-75 rounded-2">
+        Hello, {{ UserName_ }}
+      </p>
+    </div>
+    <button class="btn btn-dark text-center" (click)="ShowName(UserName)">
+      Save
+    </button>
+  </div>
+  <div class="directives bg-dark text-white w-100 py-3 my-3 rounded-4">
+    @for (student of Students; track student.id) {
+      <div class="icon">
+        <img
+          [src]="student.image"
+          alt="ERROR"
+          class="bg-white p-2 text-cnter w-50 rounded-4"
+        />
+        <p class="bg-white text-black text-center p-2 rounded-4">
+          Name : {{ student.Name }}
+        </p>
+        <p class="bg-white text-black text-center p-2 rounded-4">
+          Age : {{ student.age }}
+        </p>
+      </div>
+    }
+  </div>
+</div>

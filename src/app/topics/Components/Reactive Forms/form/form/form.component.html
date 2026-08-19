@@ -1,0 +1,48 @@
+<div class="container bg-dark text-white text-center w-75 py-3 rounded-4">
+  <h3 class="text-info mb-3">Reactive Form</h3>
+  <form [formGroup]="loginForm">
+    <div class="input">
+      <div class="name">
+        <input
+          type="text"
+          placeholder="Name"
+          class="form-control"
+          formControlName="Name"
+          [ngClass]="{
+            'border border-danger': Name?.invalid && Name?.touched,
+            'border border-info': Name?.valid,
+          }"
+        />
+        <div class="validators">
+          @if (Name?.hasError("required") && Name?.touched) {
+            <p class="text-danger pt-1">Name Not required</p>
+          } @else if (Name?.hasError("minlength")) {
+            <p class="text-danger pt-1">minlength 6</p>
+          }
+        </div>
+      </div>
+      <div class="email">
+        <input
+          type="text"
+          placeholder="Email"
+          class="form-control"
+          formControlName="Email"
+          [ngClass]="{
+            'border border-danger': Email?.invalid && Email?.touched,
+            'border border-info': Email?.valid,
+          }"
+        />
+        <div class="validators">
+          @if (Email?.hasError("required") && Email?.touched) {
+            <p class="text-danger pt-1">Email Not required</p>
+          } @else if (Email?.hasError("email")) {
+            <p class="text-danger pt-1">Email not valid</p>
+          }
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary w-25" [disabled]="loginForm.invalid">
+      Submit
+    </button>
+  </form>
+</div>
