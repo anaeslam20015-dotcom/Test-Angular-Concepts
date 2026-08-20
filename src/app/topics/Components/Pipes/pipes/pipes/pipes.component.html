@@ -25,12 +25,13 @@
     {{ discount | percent }}
   </p>
   <p class="bg-primary text-center w-25 py-2 rounded-3">
-    {{ salary | currency:'USD' }}
+    {{ salary | currency: "USD" }}
+  </p>
+  <!-- Custom Pipes -->
+  <p class="bg-primary text-center w-25 py-2 rounded-3">
+    {{ test | testPipes: 5 : 12 }}
   </p>
   <p class="bg-primary text-center w-25 py-2 rounded-3">
-    {{ DataObject | json }}
-  </p>
-  <p class="bg-primary text-center w-25 py-2 rounded-3">
-    {{ DataObject | json }}
+    {{ test | testPipes: 11 : 17 }}
   </p>
 </div>

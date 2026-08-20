@@ -8,6 +8,7 @@ import {
   UpperCasePipe,
 } from '@angular/common';
 import { Component } from '@angular/core';
+import { CustomPipe } from '../../custom-pipes/custom-pipes.pipe';
 
 @Component({
   selector: 'app-pipes',
@@ -20,6 +21,7 @@ import { Component } from '@angular/core';
     JsonPipe,
     PercentPipe,
     CurrencyPipe,
+    CustomPipe
   ],
   templateUrl: './pipes.component.html',
   styleUrl: './pipes.component.css',
@@ -34,4 +36,5 @@ export class PipesComponent {
   };
   discount = 0.7;
   salary = 5000;
+  test = 'TEST CUSTOM PIPES'
 }
