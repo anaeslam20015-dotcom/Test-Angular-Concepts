@@ -4,6 +4,7 @@ import { ViewChildComponent } from './topics/Components/Decorator/view-child/vie
 import { ParentComponent } from './topics/Components/Input & output/parent/parent/parent.component';
 import { TestServesComponent } from './topics/Components/test-serves/test-serves/test-serves.component';
 import { FormComponent } from './topics/Components/Reactive Forms/form/form/form.component';
+import { PipesComponent } from './topics/Components/Pipes/pipes/pipes/pipes.component';
 
 export const routes: Routes = [
   { path: 'data', component: TemplatesComponent, title: 'Data' },
@@ -12,6 +13,7 @@ export const routes: Routes = [
   { path: 'parent', component: ParentComponent, title: 'parent' },
   { path: 'serves', component: TestServesComponent, title: 'serves' },
   { path: 'Form', component: FormComponent, title: 'Form' },
+  { path: 'pipes', component: PipesComponent, title: 'Pipes' },
 
   { path: '**', component: TemplatesComponent, title: 'Data' },
 ];

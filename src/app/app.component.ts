@@ -9,5 +9,5 @@ import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  Router: string[] = ['data', 'view', 'parent', 'serves', 'Form'];
+  Router: string[] = ['data', 'view', 'parent', 'serves', 'Form','pipes'];
 }

@@ -8,6 +8,7 @@ import {
   ɵInternalFormsSharedModule,
 } from '@angular/forms';
 import { NgClass } from "@angular/common";
+import { CheckName } from '../../validation/Validation ';
 
 @Component({
   selector: 'app-form',
@@ -18,7 +19,7 @@ import { NgClass } from "@angular/common";
 })
 export class FormComponent {
   loginForm = new FormGroup({
-    Name: new FormControl('', [Validators.required, Validators.minLength(6)]),
+    Name: new FormControl('', [Validators.required, Validators.minLength(6),CheckName]),
     Email: new FormControl('', [Validators.required, Validators.email]),
   });
   get Name() {

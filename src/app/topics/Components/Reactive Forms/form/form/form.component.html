@@ -16,6 +16,9 @@
         <div class="validators">
           @if (Name?.hasError("required") && Name?.touched) {
             <p class="text-danger pt-1">Name Not required</p>
+          } @else if (Name?.hasError("Check")) {
+            <!-- Custom Vaildation (CheckName) -->
+            <p class="text-danger pt-1">ERROR Name Include Number</p>
           } @else if (Name?.hasError("minlength")) {
             <p class="text-danger pt-1">minlength 6</p>
           }
